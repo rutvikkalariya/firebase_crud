@@ -1,10 +1,12 @@
+// ignore_for_file: avoid_function_literals_in_foreach_calls
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_/read%20data/get_user_name.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -34,15 +36,15 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.deepPurple[300],
         title: Text(
           user.email!,
-          style: TextStyle(fontSize: 16),
+          style: const TextStyle(fontSize: 16),
         ),
         actions: [
           GestureDetector(
             onTap: () {
               FirebaseAuth.instance.signOut();
             },
-            child: Padding(
-              padding: const EdgeInsets.only(right: 10),
+            child: const Padding(
+              padding: EdgeInsets.only(right: 10),
               child: Icon(Icons.logout),
             ),
           ),

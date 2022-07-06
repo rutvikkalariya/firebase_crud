@@ -1,10 +1,12 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class GetUserName extends StatelessWidget {
   final String documentId;
 
-  GetUserName({required this.documentId});
+  const GetUserName({required this.documentId});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class GetUserName extends StatelessWidget {
                 '${data['age']}' + 
                 ' years old');
           }
-          return Text('loading..');
+          return const Text('loading..');
         });
   }
 }
