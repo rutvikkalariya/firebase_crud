@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.deepPurple[300],
         title: Text(
           user.email!,
-          style: const TextStyle(fontSize: 16),
+          style: TextStyle(fontSize: 16),
         ),
         actions: [
           GestureDetector(

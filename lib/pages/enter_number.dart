@@ -1,3 +1,4 @@
+import 'package:firebase_/pages/home_page.dart';
 import 'package:firebase_/pages/loginPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -5,7 +6,6 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
-  // ignore: library_private_types_in_public_api
   _LoginScreenState createState() => _LoginScreenState();
 }
 
@@ -134,10 +134,9 @@ class _LoginScreenState extends State<LoginScreen> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => LoginPage(
-                showRegisterPage: () {},
-              ),
-            ),
+                builder: (context) => LoginPage(
+                      showRegisterPage: () {},
+                    )),
           );
         } else {
           Fluttertoast.showToast(
